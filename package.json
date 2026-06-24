@@ -1,0 +1,76 @@
+{
+  "name": "@parischap/rollup-plugin-pure",
+  "description": "Rollup/rolldown/tsdown plugin adding @__PURE__ annotations after minification",
+  "homepage": "https://github.com/parischap/rollup-plugin-pure",
+  "license": "MIT",
+  "author": "Jérôme MARTIN",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./esm/index.ts"
+    }
+  },
+  "scripts": {
+    "test-all": "vitest run",
+    "lint": "oxlint --disable-nested-config",
+    "fmt": "oxfmt --disable-nested-config && oxlint --fix -disable-nested-config",
+    "configs": "pnpm -w configs",
+    "circular": "madge --extensions ts --circular --no-color --no-spinner esm",
+    "check": "pnpm circular && pnpm lint && pnpm test-all",
+    "lint-all": "pnpm lint",
+    "fmt-all": "pnpm fmt",
+    "check-all": "pnpm check",
+    "docgen-all": "echo \"No doc generation for 'rollup-plugin-pure'\"",
+    "release": "pnpm publish dist --provenance --no-git-checks --access public",
+    "release-all": "pnpm release"
+  },
+  "dependencies": {
+    "@jridgewell/remapping": "^2.3.5",
+    "magic-string": "^0.30.21",
+    "zimmerframe": "^1.1.4"
+  },
+  "devDependencies": {
+    "@oxc-project/types": "^0.137.0"
+  },
+  "peerDependencies": {
+    "rolldown": "^1.1.2"
+  },
+  "@parischap/configs": {
+    "description": "Rollup/rolldown/tsdown plugin adding @__PURE__ annotations after minification",
+    "version": "0.1.0",
+    "build": {
+      "bundling": "NoBundling",
+      "generateMaps": false,
+      "addPureAnnotations": false,
+      "generateCjs": true,
+      "minify": true
+    },
+    "publishTarget": "Npm",
+    "docScope": "None",
+    "dependencies": {
+      "magic-string": "^0.30.21",
+      "zimmerframe": "^1.1.4",
+      "@jridgewell/remapping": "^2.3.5"
+    },
+    "devDependencies": {
+      "@oxc-project/types": "^0.137.0"
+    },
+    "environment": "Node",
+    "examples": [],
+    "keywords": [
+      "rollup",
+      "rolldown",
+      "tsdown",
+      "plugin",
+      "pure",
+      "annotation",
+      "annotations",
+      "side-effects",
+      "tree-shaking"
+    ],
+    "peerDependencies": {
+      "rolldown": "^1.1.2"
+    },
+    "scripts": {}
+  }
+}
