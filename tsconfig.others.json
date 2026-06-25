@@ -15,8 +15,6 @@
     "_release-assets",
     "_site",
     ".git",
-    ".git",
-    ".gitmodules",
     "packages"
   ],
   "compilerOptions": {

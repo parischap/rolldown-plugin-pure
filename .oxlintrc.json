@@ -13,9 +13,7 @@
     "/docs/",
     "/_release-assets/",
     "/_site/",
-    "/.git/",
     "/.git",
-    "/.gitmodules",
     "/packages/"
   ],
   "overrides": [

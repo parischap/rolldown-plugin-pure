@@ -36,8 +36,20 @@
     "rolldown": "^1.1.2"
   },
   "@parischap/configs": {
-    "description": "Rollup/rolldown/tsdown plugin adding @__PURE__ annotations after minification",
+    "description": "Rollup/rolldown/tsdown plugin taht adds @__PURE__ annotations (compatible with minification)",
+    "moreDetails": "Well tested and documented, 100% Typescript",
     "version": "0.1.0",
+    "keywords": [
+      "rolldown-plugin",
+      "rolldown",
+      "tsdown",
+      "plugin",
+      "pure",
+      "annotation",
+      "annotations",
+      "side-effects",
+      "tree-shaking"
+    ],
     "build": {
       "bundling": "NoBundling",
       "generateMaps": false,
@@ -57,17 +69,6 @@
     },
     "environment": "Node",
     "examples": [],
-    "keywords": [
-      "rollup",
-      "rolldown",
-      "tsdown",
-      "plugin",
-      "pure",
-      "annotation",
-      "annotations",
-      "side-effects",
-      "tree-shaking"
-    ],
     "peerDependencies": {
       "rolldown": "^1.1.2"
     },
