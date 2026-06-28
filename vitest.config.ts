@@ -7,7 +7,7 @@ export default {
       "tests/**/*.test.ts"
     ],
     "isolate": false,
-    "name": "Repo rollup-plugin-pure",
+    "name": "Repo rolldown-plugin-pure",
     "pool": "threads"
   }
 }

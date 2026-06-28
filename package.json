@@ -1,7 +1,7 @@
 {
-  "name": "@parischap/rollup-plugin-pure",
-  "description": "Rollup/rolldown/tsdown plugin adding @__PURE__ annotations after minification",
-  "homepage": "https://github.com/parischap/rollup-plugin-pure",
+  "name": "@parischap/rolldown-plugin-pure",
+  "description": "Rollup/rolldown/tsdown plugin taht adds @__PURE__ annotations (compatible with minification)",
+  "homepage": "https://github.com/parischap/rolldown-plugin-pure",
   "license": "MIT",
   "author": "Jérôme MARTIN",
   "type": "module",
@@ -20,9 +20,10 @@
     "lint-all": "pnpm lint",
     "fmt-all": "pnpm fmt",
     "check-all": "pnpm check",
-    "docgen-all": "echo \"No doc generation for 'rollup-plugin-pure'\"",
+    "docgen-all": "echo \"No doc generation for 'rolldown-plugin-pure'\"",
     "release": "pnpm publish dist --provenance --no-git-checks --access public",
-    "release-all": "pnpm release"
+    "release-all": "pnpm release",
+    "update-github-about": "tsx node_modules/@parischap/configs/esm/bin/update-github-about.ts"
   },
   "dependencies": {
     "@jridgewell/remapping": "^2.3.5",
@@ -36,12 +37,13 @@
     "rolldown": "^1.1.2"
   },
   "@parischap/configs": {
-    "description": "Rollup/rolldown/tsdown plugin taht adds @__PURE__ annotations (compatible with minification)",
+    "description": "Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations (compatible with minification)",
     "moreDetails": "Well tested and documented, 100% Typescript",
     "version": "0.1.0",
     "keywords": [
       "rolldown-plugin",
       "rolldown",
+      "rollup",
       "tsdown",
       "plugin",
       "pure",
