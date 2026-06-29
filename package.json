@@ -18,7 +18,7 @@
     "docgen-all": "echo \"No doc generation for 'rolldown-plugin-pure'\"",
     "release": "pnpm publish dist --provenance --no-git-checks --access public",
     "release-all": "pnpm release",
-    "update-github-about": "tsx node_modules/@parischap/configs/esm/bin/update-github-about.ts"
+    "update-github-about": "pnpm -w update-github-about,"
   },
   "@parischap/configs": {
     "description": "Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations (compatible with minification)",
