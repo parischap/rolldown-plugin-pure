@@ -1,15 +1,10 @@
 {
   "name": "@parischap/rolldown-plugin-pure",
-  "description": "Rollup/rolldown/tsdown plugin taht adds @__PURE__ annotations (compatible with minification)",
-  "homepage": "https://github.com/parischap/rolldown-plugin-pure",
-  "license": "MIT",
-  "author": "Jérôme MARTIN",
   "type": "module",
-  "exports": {
-    ".": {
-      "default": "./esm/index.ts"
-    }
-  },
+  "author": "Jérôme MARTIN",
+  "license": "MIT",
+  "description": "Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations (compatible with minification)",
+  "homepage": "https://github.com/parischap/rolldown-plugin-pure",
   "scripts": {
     "test-all": "vitest run",
     "lint": "oxlint --disable-nested-config",
@@ -24,17 +19,6 @@
     "release": "pnpm publish dist --provenance --no-git-checks --access public",
     "release-all": "pnpm release",
     "update-github-about": "tsx node_modules/@parischap/configs/esm/bin/update-github-about.ts"
-  },
-  "dependencies": {
-    "@jridgewell/remapping": "^2.3.5",
-    "magic-string": "^0.30.21",
-    "zimmerframe": "^1.1.4"
-  },
-  "devDependencies": {
-    "@oxc-project/types": "^0.137.0"
-  },
-  "peerDependencies": {
-    "rolldown": "^1.1.2"
   },
   "@parischap/configs": {
     "description": "Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations (compatible with minification)",
@@ -75,5 +59,21 @@
       "rolldown": "^1.1.2"
     },
     "scripts": {}
+  },
+  "exports": {
+    ".": {
+      "default": "./esm/index.ts"
+    }
+  },
+  "dependencies": {
+    "magic-string": "^0.30.21",
+    "zimmerframe": "^1.1.4",
+    "@jridgewell/remapping": "^2.3.5"
+  },
+  "devDependencies": {
+    "@oxc-project/types": "^0.137.0"
+  },
+  "peerDependencies": {
+    "rolldown": "^1.1.2"
   }
 }
