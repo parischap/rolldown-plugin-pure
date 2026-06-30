@@ -39,7 +39,7 @@
   "@parischap/configs": {
     "description": "Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations. Compatible with the {minify: true} bundling option.",
     "moreDetails": "Well tested and documented, 100% Typescript",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "keywords": [
       "rolldown-plugin",
       "rolldown",

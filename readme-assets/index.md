@@ -137,6 +137,14 @@ When sourcemaps are enabled (`output.sourcemap !== false`), the plugin composes 
 
 # Changelog
 
-## v0.1.0
+## 0.1.2
+
+Improved package documentation.
+
+## 0.1.1
+
+Improved package documentation.
+
+## 0.1.0
 
 First public release. Provides a single `generateBundle` plugin that annotates call expressions, constructor calls, member expressions, and spread-containing object/array literals with `/*@__PURE__*/` after minification. Supports sourcemap composition via `@jridgewell/remapping`.
