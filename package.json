@@ -3,7 +3,7 @@
   "type": "module",
   "author": "Jérôme MARTIN",
   "license": "MIT",
-  "description": "Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations. Compatible with the minify bundling option.",
+  "description": "Rollup/rolldown/tsdown/vite plugin that adds @__PURE__ annotations. Compatible with the minify bundling option.",
   "homepage": "https://github.com/parischap/rolldown-plugin-pure",
   "scripts": {
     "test-all": "vitest run",
@@ -21,7 +21,7 @@
     "update-github-about": "pnpm -w update-github-about"
   },
   "@parischap/configs": {
-    "description": "Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations. Compatible with the minify bundling option.",
+    "description": "Rollup/rolldown/tsdown/vite plugin that adds @__PURE__ annotations. Compatible with the minify bundling option.",
     "moreDetails": "Well tested and documented, 100% Typescript",
     "version": "0.1.2",
     "keywords": [
@@ -51,14 +51,37 @@
       "@jridgewell/remapping": "^2.3.5"
     },
     "devDependencies": {
-      "@oxc-project/types": "^0.137.0"
+      "@oxc-project/types": "^0.137.0",
+      "rolldown": "1.0.0",
+      "rollup": "3.0.0",
+      "vite": "3.0.0",
+      "tsdown": "0.17.0"
     },
     "environment": "Node",
     "examples": [],
-    "peerDependencies": {
-      "rolldown": "^1.1.2"
-    },
-    "scripts": {}
+    "peerDependencies": {},
+    "scripts": {},
+    "prodMiscellaneous": {
+      "compatiblePackages": {
+        "schemaVersion": 1,
+        "vite": {
+          "type": "compatible",
+          "versions": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
+        },
+        "rollup": {
+          "type": "compatible",
+          "versions": "^3.0.0 || ^4.0.0"
+        },
+        "rolldown": {
+          "type": "compatible",
+          "versions": "^1.0.0"
+        },
+        "tsdown": {
+          "type": "compatible",
+          "versions": "^0.17.0 || ^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0"
+        }
+      }
+    }
   },
   "exports": {
     ".": {
@@ -71,9 +94,11 @@
     "@jridgewell/remapping": "^2.3.5"
   },
   "devDependencies": {
-    "@oxc-project/types": "^0.137.0"
+    "@oxc-project/types": "^0.137.0",
+    "rolldown": "1.0.0",
+    "rollup": "3.0.0",
+    "vite": "3.0.0",
+    "tsdown": "0.17.0"
   },
-  "peerDependencies": {
-    "rolldown": "^1.1.2"
-  }
+  "peerDependencies": {}
 }

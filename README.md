@@ -3,7 +3,7 @@
 <!-- LTeX: language=en-US -->
 # rolldown-plugin-pure
 
-Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations. Compatible with the minify bundling option.
+Rollup/rolldown/tsdown/vite plugin that adds @__PURE__ annotations. Compatible with the minify bundling option.
 Well tested and documented, 100% Typescript
 
 # [&rarr; GETTING STARTED](readme-assets/index.md)
@@ -21,17 +21,17 @@ Depending on the package manager you use, run one of the following commands in y
 - **npm:**
 
   ```sh
-  npm install rolldown @parischap/rolldown-plugin-pure
+  npm install @parischap/rolldown-plugin-pure
   ```
 
 - **pnpm:**
 
   ```sh
-  pnpm add rolldown @parischap/rolldown-plugin-pure
+  pnpm add @parischap/rolldown-plugin-pure
   ```
 
 - **yarn:**
 
   ```sh
-  yarn add rolldown @parischap/rolldown-plugin-pure
+  yarn add @parischap/rolldown-plugin-pure
   ```

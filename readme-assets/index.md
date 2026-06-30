@@ -28,7 +28,7 @@ This means the plugin is fully compatible with `minify: true` and will never con
 
 ## 1) Configuration
 
-### rolldown / tsdown
+### rolldown
 
 ```ts
 // rolldown.config.ts
@@ -41,6 +41,20 @@ export default defineConfig({
     format: 'esm',
     minify: true,
   },
+  plugins: [pure()],
+});
+```
+
+### tsdown
+
+```ts
+// tsdown.config.ts
+import { defineConfig } from 'tsdown';
+import pure from '@parischap/rolldown-plugin-pure';
+
+export default defineConfig({
+  entry: 'src/index.ts',
+  format: 'esm',
   plugins: [pure()],
 });
 ```
@@ -60,6 +74,24 @@ export default defineConfig({
     format: 'esm',
   },
   plugins: [pure()],
+});
+```
+
+### vite
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite';
+import pure from '@parischap/rolldown-plugin-pure';
+
+export default defineConfig({
+  plugins: [pure()],
+  build: {
+    lib: {
+      entry: 'src/index.ts',
+      formats: ['es'],
+    },
+  },
 });
 ```
 
