@@ -3,7 +3,7 @@
 <!-- LTeX: language=en-US -->
 # rolldown-plugin-pure
 
-Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations without interfering with minification which it can run along to
+Rollup/rolldown/tsdown plugin that adds @__PURE__ annotations. Compatible with the minify bundling option.
 Well tested and documented, 100% Typescript
 
 # [&rarr; GETTING STARTED](readme-assets/index.md)
