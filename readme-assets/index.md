@@ -169,11 +169,7 @@ When sourcemaps are enabled (`output.sourcemap !== false`), the plugin composes 
 
 # Changelog
 
-## 0.1.2
-
-Improved package documentation.
-
-## 0.1.1
+## 0.1.1 → 0.1.3
 
 Improved package documentation.
 
