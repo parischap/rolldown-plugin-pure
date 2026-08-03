@@ -8,11 +8,6 @@ Well tested and documented, 100% Typescript
 
 # [&rarr; GETTING STARTED](readme-assets/index.md)
 
-# &rarr; DONATE
-
-[Any donations would be much appreciated](https://ko-fi.com/parischap) 😄
-
-Please star the repo if you find it useful!
 
 # &rarr; INSTALLING
 
@@ -35,3 +30,12 @@ Depending on the package manager you use, run one of the following commands in y
   ```sh
   yarn add @parischap/rolldown-plugin-pure
   ```
+# &rarr; DONATE
+
+[Any donations would be much appreciated](https://ko-fi.com/parischap) 😄
+
+Please star the repo if you find it useful!
+
+# &rarr; LICENSE
+
+MIT © Jérôme MARTIN ([@parischap](https://github.com/parischap))
