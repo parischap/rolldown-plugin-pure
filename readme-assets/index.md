@@ -12,11 +12,11 @@
 
 # In this package
 
-This package contains a single rollup/rolldown/tsdown plugin that inserts `/*@__PURE__*/` annotations into the bundled output, enabling tree-shakers to remove unused calls, constructors, and property accesses.
+This package contains a single `rollup`/`rolldown`/`tsdown` plugin that inserts `/*@__PURE__*/` annotations into the bundled output, enabling tree-shakers to remove unused calls, constructors, and property accesses.
 
 The `/*@__PURE__*/` comment, placed immediately before an expression, tells the bundler that the annotated expression is side-effect-free. When the expression's result is never used, the bundler is allowed to drop it entirely. Without these annotations, bundlers must conservatively keep every call — even if nothing imports the result.
 
-The critical design choice is **when** the annotations are inserted. Most similar plugins run as a transform step, before minification. The minifier then sees and may strip these annotations — defeating the purpose. This plugin hooks into `generateBundle`, which runs **after** `renderChunk` (where minification takes place). The annotations are therefore written into the already-minified output and are never seen by the minifier.
+The critical design choice is **when** the annotations are inserted. Most similar plugins run as a transform step, before minification. The `minifier` then sees and may strip these annotations — defeating the purpose. This plugin hooks into `generateBundle`, which runs **after** `renderChunk` (where minification takes place). The annotations are therefore written into the already-minified output and are never seen by the minifier.
 
 ```
 Source → transform → renderChunk (minify) → generateBundle (← plugin runs here) → output
