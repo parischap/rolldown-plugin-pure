@@ -2,13 +2,19 @@ import { rmSync, writeFileSync, mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
+import * as afterAll from '@effect/vitest/afterAll';
+import * as assert from '@effect/vitest/assert';
+import * as beforeAll from '@effect/vitest/beforeAll';
+import * as describe from '@effect/vitest/describe';
+import * as expect from '@effect/vitest/expect';
+import * as it from '@effect/vitest/it';
+
 import type { OutputChunk, RollupOutput } from 'rollup';
 
 import { build as rolldownBuild } from 'rolldown';
 import { rollup } from 'rollup';
 import { build as tsdownBuild } from 'tsdown';
 import { build as viteBuild } from 'vite';
-import { afterAll, assert, beforeAll, describe, expect, it } from '@effect/vitest';
 
 import purePlugin from '../esm/index.js';
 
