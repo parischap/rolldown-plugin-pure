@@ -2,15 +2,13 @@ import { rmSync, writeFileSync, mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-import * as TestUtils from '@parischap/configs/TestUtils';
-
 import type { OutputChunk, RollupOutput } from 'rollup';
 
 import { build as rolldownBuild } from 'rolldown';
 import { rollup } from 'rollup';
 import { build as tsdownBuild } from 'tsdown';
 import { build as viteBuild } from 'vite';
-import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+import { afterAll, assert, beforeAll, describe, expect, it } from '@effect/vitest';
 
 import purePlugin from '../esm/index.js';
 
@@ -91,7 +89,7 @@ describe('rollup-plugin-pure', () => {
         dts: false,
         logLevel: 'silent',
       });
-      TestUtils.assertDefined(bundle);
+      assert.isDefined(bundle);
       const chunk = bundle.chunks.find((c) => c.type === 'chunk') as { code: string } | undefined;
       expect(chunk?.code).toContain('/*@__PURE__*/');
     });
@@ -105,7 +103,7 @@ describe('rollup-plugin-pure', () => {
         dts: false,
         logLevel: 'silent',
       });
-      TestUtils.assertDefined(bundle);
+      assert.isDefined(bundle);
       const chunk = bundle.chunks.find((c) => c.type === 'chunk') as { code: string } | undefined;
       expect(chunk?.code).not.toContain('/*@__PURE__*/');
     });
