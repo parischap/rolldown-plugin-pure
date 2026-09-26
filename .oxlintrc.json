@@ -16,12 +16,27 @@
     "/.git",
     "/packages/"
   ],
-  "extends": [
+  "overrides": [
     {
-      "options": {
-        "typeAware": true
+      "files": [
+        "**/*.js",
+        "**/*.mjs",
+        "**/*.cjs",
+        "**/*.ts",
+        "**/*.mts",
+        "**/*.cts"
+      ],
+      "env": {
+        "node": true
       },
       "plugins": [
+        "eslint",
+        "typescript",
+        "unicorn",
+        "oxc",
+        "import",
+        "jsdoc",
+        "promise",
         "effecttsgo"
       ],
       "rules": {
@@ -122,34 +137,7 @@
         "effecttsgo/unnecessary-fail-yieldable-error": "warn",
         "effecttsgo/unnecessary-pipe": "warn",
         "effecttsgo/unnecessary-pipe-chain": "warn",
-        "effecttsgo/unnecessary-typeof-type": "warn"
-      }
-    }
-  ],
-  "overrides": [
-    {
-      "files": [
-        "**/*.js",
-        "**/*.mjs",
-        "**/*.cjs",
-        "**/*.ts",
-        "**/*.mts",
-        "**/*.cts"
-      ],
-      "env": {
-        "node": true
-      },
-      "plugins": [
-        "eslint",
-        "typescript",
-        "unicorn",
-        "oxc",
-        "import",
-        "jsdoc",
-        "promise",
-        "effecttsgo"
-      ],
-      "rules": {
+        "effecttsgo/unnecessary-typeof-type": "warn",
         "eqeqeq": "error",
         "func-names": [
           "error",
